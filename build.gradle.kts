@@ -24,7 +24,7 @@ publishing {
             artifactId = "ktts-annotations"
             version = "1.0.0"
 
-            from(components["java"])
+            from(components["kotlin"])
         }
     }
 }
