@@ -4,18 +4,7 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenCentral()
-}
-
-tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-}
+repositories { mavenCentral() }
 
 publishing {
     publications {
