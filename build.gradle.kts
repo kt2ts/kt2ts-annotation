@@ -10,7 +10,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "kt2ts"
-            artifactId = "kt2ts-annotations"
+            artifactId = "kt2ts-annotation"
             version = "1.0.0"
 
             from(components["kotlin"])
