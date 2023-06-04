@@ -9,7 +9,7 @@ repositories { mavenCentral() }
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "kt2ts"
+            groupId = "io.github.kt2ts"
             artifactId = "kt2ts-annotation"
             version = "1.0.0"
 
