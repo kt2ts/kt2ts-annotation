@@ -4,6 +4,14 @@ plugins {
     `maven-publish`
 }
 
+java {
+    /*
+     * Setup JDK and will also set target with Kotlin projects.
+     * https://docs.gradle.org/current/userguide/toolchains.html
+     */
+    toolchain { languageVersion.set(JavaLanguageVersion.of(17)) }
+}
+
 repositories { mavenCentral() }
 
 publishing {
