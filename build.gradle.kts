@@ -12,7 +12,10 @@ java {
     toolchain { languageVersion.set(JavaLanguageVersion.of(17)) }
 }
 
-repositories { mavenCentral() }
+repositories {
+    mavenCentral()
+    maven("https://mlorber.net/maven_repo")
+}
 
 publishing {
     publications {
@@ -22,17 +25,6 @@ publishing {
             version = "1.0.0"
 
             from(components["kotlin"])
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/kt2ts/kt2ts-annotation")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
         }
     }
 }
